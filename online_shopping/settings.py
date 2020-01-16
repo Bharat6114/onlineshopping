@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     ##App name
-    "Online_shopping"
+    "online_shoppin_app"
 ]
 
 MIDDLEWARE = [

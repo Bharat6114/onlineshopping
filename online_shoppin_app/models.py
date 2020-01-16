@@ -12,8 +12,9 @@ class Category(models.Model):
         return self.title
 class Product(models.Model):
     product_name = models.CharField(max_length=250)
-    product_price = models.IntegerField(max_length=5)
+    product_price = models.IntegerField()
     count = models.IntegerField(default=0)
+    slug = models.SlugField(max_length=255, null=True)
 
     category = models.ManyToManyField(Category, related_name="product_categoreis")
     product_image = models.ImageField(upload_to="online_shopping", null=True)

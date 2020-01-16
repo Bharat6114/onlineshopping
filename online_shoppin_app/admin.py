@@ -6,7 +6,7 @@ from online_shoppin_app.models import Product,Category
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ("product_name", "product_price", "created_at")
-    prepopulated_fields = {"slug": ("title",)}
+    prepopulated_fields = {"slug": ("product_name",)}
     # readonly_fields = ("author",)
     # 
     # 
