@@ -1,30 +1,29 @@
 {% extends 'partial/layout.html' %}
-			{% block topheader %}
-			{% include "partial/topheader.html" %}
-			{% endblock topheader %}
+    {% block topheader %}
+	 {% include "partial/topheader.html" %}
+	{% endblock topheader %}		
 		
-		<div id="header">
-		{% block header %}
+	{% block header %}
 		{% include "partial/header.html" %}
-		{% endblock header %}
+	{% endblock header %}
 		
 	{% block navigation %}
-	{% include "partial/navigation.html" %}
+	 {% include "partial/navigation.html" %}
 	{% endblock navigation %}
 	
-		{% block newproduct %}
+	{% block newproduct %}
 		{% include "partial/newproduct.html" %}
-		{% endblock newproduct %}
+	{% endblock newproduct %}
 	
-		{% block latestproduct %}
+	{% block latestproduct %}
 		{% include "partial/latestproduct.html" %}
-		{% endblock latestproduct %}
+	{% endblock latestproduct %}
 	
-		{% block footer %}
+	{% block footer %}
 		{% include "partial/footer.html" %}
-		{% endblock footer %}
+	{% endblock footer %}
 		
 	{% block script %}
-	{% include "partial/script.html" %}
+	    {% include "partial/script.html" %}
 	{% endblock script %}
 
