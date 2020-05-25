@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     ##App name
-    "online_shoppin_app"
+    "online_shopping_app",
 ]
 
 MIDDLEWARE = [
@@ -65,6 +65,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                "online_shopping_app.context_procesor.categories",
+
             ],
         },
     },
@@ -125,3 +127,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     
 ]
+
+MEDIA_URL ="/media/"
+MEDIA_ROOT =  os.path.join(BASE_DIR, "media")
