@@ -12,7 +12,27 @@
 	{% endblock navigation %}
 	
 	{% block newproduct %}
-		{% include "partial/newproduct.html" %}
+		<div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="section-title">
+              <span class="caption d-block small">Categories</span>
+              <h2>{{ category.title }}</h2>
+            </div>
+            {% for news in category_news_list %}
+            <div class="post-entry-2 d-flex">
+              <div class="thumbnail order-md-2" style="background-image: url('{{ news.cover_image.url }}')"></div>
+              <div class="contents order-md-1 pl-0">
+                <h2><a href="{{ news.get_absolute_url }}">{{ news.title }}</a></h2>
+                <p class="mb-3">{{ news.content }}</p>
+                <div class="post-meta">
+                  <span class="d-block"><a href="#">{{ news.author }}</a> in <a href="#">{{ category.title }}</a></span>
+                  <span class="date-read">{{ news.created_at }}</span>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+            
 	{% endblock newproduct %}
 	
 	{% block latestproduct %}

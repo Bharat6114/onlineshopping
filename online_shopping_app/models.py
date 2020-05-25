@@ -22,6 +22,8 @@ class Products(models.Model):
     product_description = models.TextField()
     product_detail = models.TextField()
     product_price = models.DecimalField(max_digits=5, decimal_places=2)
+    discount_product_price = models.DecimalField(max_digits=5, decimal_places=2)
+
     count = models.IntegerField(default=0)
     slug = models.SlugField(max_length=255, null=True)
     category = models.ManyToManyField(Category, related_name="products_categoreis")
@@ -34,3 +36,10 @@ class Products(models.Model):
 
     def get_absolute_url(self):
         return reverse("single_news", kwargs={"pk": self.pk, "slug": self.slug})
+
+class Comment(models.Model):
+    products = models.ForeignKey(Products, on_delete=models.CASCADE)
+    commenter = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    feedback = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

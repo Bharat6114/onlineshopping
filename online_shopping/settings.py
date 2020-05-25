@@ -37,8 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #thirdparty
+    "crispy_forms",
     ##App name
     "online_shopping_app",
+    "account",
 ]
 
 MIDDLEWARE = [
@@ -130,3 +133,9 @@ STATICFILES_DIRS = [
 
 MEDIA_URL ="/media/"
 MEDIA_ROOT =  os.path.join(BASE_DIR, "media")
+
+
+RISPY_TEMPLATE_PACK = "bootstrap4"
+
+LOGIN_REDIRECT_URL = "/"
+AUTH_USER_MODEL = "account.User"

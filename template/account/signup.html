@@ -14,7 +14,11 @@
 	{% endblock navigation %}
 	
 	{% block newproduct %}
-		{% include "partial/newproduct.html" %}
+	<form method="post">
+  {% csrf_token %} 
+  {{ form|crispy  }}
+  <button type="submit">Signup</button>
+   </form>
 	{% endblock newproduct %}
 	
 	{% block latestproduct %}
