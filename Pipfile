@@ -10,6 +10,7 @@ pylint = "*"
 django = "==2.2.2"
 pillow = "*"
 pylint = "*"
+django-cryspy-forms = "==1.9.1"
 
 [requires]
 python_version = "3.7"
