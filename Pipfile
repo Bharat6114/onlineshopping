@@ -9,6 +9,7 @@ pylint = "*"
 [packages]
 django = "==2.2.2"
 pillow = "*"
+pylint = "*"
 
 [requires]
 python_version = "3.7"

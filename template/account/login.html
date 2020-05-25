@@ -1,0 +1,36 @@
+{% extends 'partial/layout.html' %}
+{% load crispy_forms_tags %}
+    {% block topheader %}
+	 {% include "partial/topheader.html" %}
+
+	{% endblock topheader %}		
+		
+	{% block header %}
+		{% include "partial/header.html" %}
+	{% endblock header %}
+		
+	{% block navigation %}
+	 {% include "partial/navigation.html" %}
+	{% endblock navigation %}
+	
+	{% block newproduct %}
+	<p>Login <p>
+<form method="post">
+  {% csrf_token %} 
+  {{ form|crispy  }}
+  <button type="submit">Login</button>
+</form>
+	{% endblock newproduct %}
+	
+	{% block latestproduct %}
+		{% include "partial/latestproduct.html" %}
+	{% endblock latestproduct %}
+	
+	{% block footer %}
+		{% include "partial/footer.html" %}
+	{% endblock footer %}
+		
+	{% block script %}
+	    {% include "partial/script.html" %}
+	{% endblock script %}
+
