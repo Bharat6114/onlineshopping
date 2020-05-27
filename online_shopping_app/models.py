@@ -35,7 +35,7 @@ class Products(models.Model):
     cover_image3 = models.ImageField(upload_to="onlineshopping", null=True)
 
     def get_absolute_url(self):
-        return reverse("single_news", kwargs={"pk": self.pk, "slug": self.slug})
+        return reverse("single_products", kwargs={"pk": self.pk, "slug": self.slug})
 
 class Comment(models.Model):
     products = models.ForeignKey(Products, on_delete=models.CASCADE)

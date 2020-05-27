@@ -1,5 +1,6 @@
 from django.contrib import admin
 from online_shopping_app.models import Products,Category
+from account.models import User
 
 # Register your models here.
 
@@ -11,3 +12,4 @@ class ProductsAdmin(admin.ModelAdmin):
     # 
     # 
 admin.site.register(Category)
+admin.site.register(User)

@@ -1,9 +1,9 @@
 from django.urls import path
-#from online_shopping_app import views
+from online_shopping_app import views
 
 urlpatterns = [
-    # path("<category_id>/", views.CategoryProductsView.as_view(), name="category_products"),
-    # path("<pk>/<slug>", views.ProductsDetail.as_view(), name="single_products"),
-    # path("<pk>/<slug>/feedback/", views.products_feedback, name="feedback_products"),
+    path("<category_id>/", views.CategoryProductsView.as_view(), name="category_products"),
+    path("<pk>/<slug>", views.ProductsDetail.as_view(), name="single_products"),
+    path("<pk>/<slug>/feedback/", views.products_feedback, name="feedback_products"),
 
  ]
